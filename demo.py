@@ -9,7 +9,7 @@ import yaml
 
 from FaceBoxes import FaceBoxes
 from TDDFA import TDDFA
-from utils.render import render
+# from utils.render import render
 #from utils.render_ctypes import render  # faster
 from utils.depth import depth
 from utils.pncc import pncc
@@ -65,8 +65,8 @@ def main(args):
         draw_landmarks(img, ver_lst, show_flag=args.show_flag, dense_flag=dense_flag, wfp=wfp)
     elif args.opt == '2d_dense':
         draw_landmarks(img, ver_lst, show_flag=args.show_flag, dense_flag=dense_flag, wfp=wfp)
-    elif args.opt == '3d':
-        render(img, ver_lst, tddfa.tri, alpha=0.6, show_flag=args.show_flag, wfp=wfp)
+    # elif args.opt == '3d':
+        # render(img, ver_lst, tddfa.tri, alpha=0.6, show_flag=args.show_flag, wfp=wfp)
     elif args.opt == 'depth':
         # if `with_bf_flag` is False, the background is black
         depth(img, ver_lst, tddfa.tri, show_flag=args.show_flag, wfp=wfp, with_bg_flag=True)
